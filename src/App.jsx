@@ -15,9 +15,8 @@ function App() {
    <Navbar/>
    <div className="container">
     <div className="d-flex m-5">
-     <ItemListContainer nombre="One punch" imagen="https://images-na.ssl-images-amazon.com/images/I/81s8xJUzWGL.jpg" tipo="Manga"/>
-      <ItemListContainer nombre="Chain saw" imagen="https://img.assinaja.com/assets/tZ/050/img/131892_520x520.jpg" tipo="Manga"/>
-      <ItemListContainer nombre="Monster" imagen="https://images.cdn2.buscalibre.com/fit-in/360x360/50/8a/508ae8657ccd59f01f0e438050ea4ce8.jpg" tipo="Manga"/>
+     <ItemListContainer />
+     
       </div>
    </div>
    <div className="container">
