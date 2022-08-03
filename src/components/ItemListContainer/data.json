@@ -1,0 +1,41 @@
+[
+    {"id": 1, 
+    "nombre": "Chain Saw", 
+
+    "tipo": "Manga", 
+
+    "precio": 750, 
+
+    "img": "https://images-na.ssl-images-amazon.com/images/I/81s8xJUzWGL.jpg",
+
+    "descripcion": "Cuando su padre murió, Denji se vio obligado a saldar una gran deuda y no había forma de pagarla. Pero gracias a la ayuda de un Demonio Perro que salvó llamado Pochita, Denji es capaz de sobrevivir convirtiéndose en un Cazador Demonio a sueldo haciendo trabajos para los Yakuz"
+},
+
+
+    {"id": 2, 
+    "nombre": "One punch", 
+
+    "tipo": "Manga", 
+
+    "precio": 800, 
+
+    "img": "https://img.assinaja.com/assets/tZ/050/img/131892_520x520.jpg",
+
+    "descripcion": "El mundo se ve invadido por extraños monstruos que aparecen misteriosamente y que causan numerosos desastres a la población. Saitama es un poderoso superhéroe calvo que derrota fácilmente a los monstruos u otros villanos con un único golpe de su puño."
+
+},
+    
+    
+
+
+    {"id": 3, 
+    "nombre": "Monster", 
+
+    "tipo": "Manga", 
+
+    "precio": 2200, 
+
+    "img": "https://images.cdn2.buscalibre.com/fit-in/360x360/50/8a/508ae8657ccd59f01f0e438050ea4ce8.jpg",
+    "descripcion": " La serie narra la historia de un neurocirujano japonés llamado Kenzo Tenma, quien creyendo hacer lo correcto le salva la vida a un niño aparentemente normal; pero lejos de la realidad, este infante es en realidad un asesino sociópata que cambiará y destruirá las vidas de todos aquellos con los que se cruce en el camino"
+}
+]

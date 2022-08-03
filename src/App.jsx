@@ -5,28 +5,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer';
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-   
-    <div className='App' style={{width:"100%", height:"100%"}}>
+    <BrowserRouter>  
    <Navbar/>
-   <div className="container">
-    <div className="d-flex m-5">
-     <ItemListContainer />
-     
-      </div>
-   </div>
-   <div className="container">
-    <div className="d-flex m-5">
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:idCategoria" element={<ItemListContainer />} />
+          <Route path="/mangaDetalles/:id" element={<ItemDetailContainer/>} />
+          <Route path="*" element={<p>404</p>} />
+        </Routes>
      <ItemCount/>
-      </div>
-   </div>
-    {/* fin de el div de app */}
-   </div>
-   
+   </BrowserRouter>
    
   
    

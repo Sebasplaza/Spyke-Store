@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemLista from './ItemLista';
 
 
+
 export default function ItemListContainer(props) {
  const [productos,setProductos]= useState([]);
   useEffect(()=>{
@@ -38,7 +39,10 @@ export default function ItemListContainer(props) {
   
     return (
       <>
+      <div className="container d-flex m-4">
       <ItemLista productos={productos} />
+      <h1>{productos.id}</h1>
+      </div>
       </>
     )
    
