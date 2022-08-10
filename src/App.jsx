@@ -4,7 +4,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer';
 
@@ -19,9 +19,10 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:idCategoria" element={<ItemListContainer />} />
           <Route path="/mangaDetalles/:id" element={<ItemDetailContainer/>} />
+          <Route path="/cart" element={<p>CARRTIO</p>} />
           <Route path="*" element={<p>404</p>} />
         </Routes>
-     <ItemCount/>
+   
    </BrowserRouter>
    
   
