@@ -2,13 +2,18 @@ import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route,Link } from "react-router-dom";
 import { useParams} from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount';
-
+import { useCartContext } from '../../Cartcontex';
 export default function ItemDetail({manga}) {
   const {id}=useParams()
   const [andaAlCarrito, setandaAlCarrito] = useState(false);
   const [goToCart, setGoToCart]= useState(false);
+ 
+  const {addProduct} = useCartContext();
+  
   const onAdd =(quantity) =>{
  setGoToCart(true);
+ addProduct(manga, quantity);
+ 
   }
   return (
     <>
