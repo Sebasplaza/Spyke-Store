@@ -7,7 +7,7 @@ export default function Item({productos}) {
   
  
     <div className="card " style={{width: "18rem"}}>
-    <img src={productos.imagen} className="card-img-top" alt="chainsaw"/>
+    <img src={productos.imagen} className="card-img-top" alt={productos.nombre}/>
     <div className="card-body">
       <h5 className="card-title">{productos.nombre}</h5>
       <p className="card-text">{productos.tipo}</p>

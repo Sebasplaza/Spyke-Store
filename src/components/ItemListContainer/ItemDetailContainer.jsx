@@ -2,9 +2,9 @@ import React, {useState, useEffect}from 'react'
 import { useParams, Link} from 'react-router-dom'
 import ItemDetail from './ItemDetail'
 export default function ItemDetailContainer({productos}) {
-// console.log(useParams())
+
 const {id}=useParams()
-console.log(id)
+
 
 
 
@@ -20,7 +20,7 @@ const [manga,setmanga]= useState([]);
       {
       id:2,
       nombre:"One punch",
-      imagen:"https://img.assinaja.com/assets/tZ/050/img/131892_520x520.jpg",
+      imagen:"https://i.pinimg.com/736x/3c/0a/05/3c0a05fa6e0295b95f741352c342143a--le-lien-one-punch-man-manga.jpg",
       tipo:"Manga",
       precio:2750},
       {

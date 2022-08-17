@@ -18,7 +18,7 @@ export default function ItemDetail({manga}) {
   return (
     <>
     <div className="card " style={{width: "18rem"}}>
-    <img src={manga.imagen} className="card-img-top" alt={manga.nombre}/>
+    <img src={manga.imagen} className="card-img-top"/>
    <h1>{manga.nombre}</h1>
    <h1>{manga.precio}</h1>
    {

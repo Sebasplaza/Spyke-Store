@@ -8,7 +8,7 @@ import ItemDetailContainer from './components/ItemListContainer/ItemDetailContai
 import Cart from './components/ItemListContainer/Cart';
 
 import CartProvider from './Cartcontex';
-function App() {
+function App({productos}) {
   const [count, setCount] = useState(0)
 
   return (
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:idCategoria" element={<ItemListContainer />} />
-          <Route path="/mangaDetalles/:id" element={<ItemDetailContainer/>} />
+          <Route path="/mangaDetalles/:id" element={<ItemDetailContainer productos={productos}/>} />
           <Route path="/cart" element={<Cart/>} />
           <Route path="*" element={<p>404</p>} />
         </Routes>

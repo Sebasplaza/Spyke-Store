@@ -10,19 +10,22 @@ export default function ItemListContainer(props) {
     let productosObj = 
     [{
       id:1,
-      nombre:"One punch",
+      nombre:"Chain saw",
       imagen:"https://images-na.ssl-images-amazon.com/images/I/81s8xJUzWGL.jpg",
-      tipo:"Manga",},
+      tipo:"Manga",
+      precio:1750},
       {
       id:2,
-      nombre:"Chain saw",
-      imagen:"https://img.assinaja.com/assets/tZ/050/img/131892_520x520.jpg",
-      tipo:"Manga",},
+      nombre:"One punch",
+      imagen:"https://i.pinimg.com/736x/3c/0a/05/3c0a05fa6e0295b95f741352c342143a--le-lien-one-punch-man-manga.jpg",
+      tipo:"Manga",
+      precio:2750},
       {
       id:3,
       nombre:"Monster",
       imagen:"https://images.cdn2.buscalibre.com/fit-in/360x360/50/8a/508ae8657ccd59f01f0e438050ea4ce8.jpg",
-      tipo:"Manga",},
+      tipo:"Manga",
+      precio:750},
     ];
     
     const promesaProductos = new Promise((res,rej)=>{
