@@ -11,8 +11,7 @@ export default function Item({productos}) {
     <div className="card-body">
       <h5 className="card-title">{productos.nombre}</h5>
       <p className="card-text">{productos.tipo}</p>
-      <a href="#" className="btn btn-primary">Comprar</a>
-      <Link to={`/mangaDetalles/${productos.id}`} >detalles</Link>
+      <Link to={`/mangaDetalles/${productos.id}`}className="btn btn-primary" >detalles</Link>
       
     </div>
   </div>

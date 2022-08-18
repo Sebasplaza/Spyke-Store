@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ArrowRight, Cart, CartDash } from 'react-bootstrap-icons';
 import CartWidget from './CartWidget';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link} from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -27,7 +27,7 @@ const Navbar = () => {
          
         </ul>
       </div>
-     <CartWidget/>
+      <NavLink to='/cart' className="btn btn-primary" ><CartWidget/></NavLink> 
     </div>
   </nav>
  

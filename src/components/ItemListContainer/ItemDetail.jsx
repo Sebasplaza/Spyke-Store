@@ -20,7 +20,7 @@ export default function ItemDetail({manga}) {
     <div className="card " style={{width: "18rem"}}>
     <img src={manga.imagen} className="card-img-top"/>
    <h1>{manga.nombre}</h1>
-   <h1>{manga.precio}</h1>
+   <h1>${manga.precio}</h1>
    {
 goToCart
 ? <Link to='/cart'>Terminar Compra</Link>

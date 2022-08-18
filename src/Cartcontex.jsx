@@ -25,7 +25,15 @@ const addProduct = (item, quantity) =>{
     }
 }
 console.log('carrito', cart)
-    
+
+const totalPrice = ()=> {
+    return cart.reduce((prev, act) => prev + act.quantity * act.precio, 0);
+}
+console.log('precio', totalPrice())
+
+const totalProducts = () => cart.reduce((acumulador, productoActual)=> acumulador + productoActual.quantity,0);
+console.log('total de productos ', totalProducts())
+
   return (
     <CartContex.Provider 
     value={
@@ -34,6 +42,10 @@ clearCart,
 isInCart,
 removeProduct,
 addProduct,
+totalProducts,
+totalPrice,
+cart 
+,
     }
     }>
 {children}
