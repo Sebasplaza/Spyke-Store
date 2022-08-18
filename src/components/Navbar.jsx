@@ -3,8 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ArrowRight, Cart, CartDash } from 'react-bootstrap-icons';
 import CartWidget from './CartWidget';
 import { NavLink, Link} from 'react-router-dom';
-
+import { useCartContext } from '../Cartcontex';
 const Navbar = () => {
+  const {totalProducts} = useCartContext();
   return (
     
     
@@ -28,6 +29,7 @@ const Navbar = () => {
         </ul>
       </div>
       <NavLink to='/cart' className="btn btn-primary" ><CartWidget/></NavLink> 
+      <span>{totalProducts()|| ''}</span> 
     </div>
   </nav>
  
