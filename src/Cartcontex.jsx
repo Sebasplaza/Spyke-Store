@@ -27,7 +27,7 @@ const addProduct = (item, quantity) =>{
 console.log('carrito', cart)
 
 const totalPrice = ()=> {
-    return cart.reduce((prev, act) => prev + act.quantity * act.precio, 0);
+    return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
 }
 console.log('precio', totalPrice())
 

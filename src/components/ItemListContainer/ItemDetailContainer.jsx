@@ -1,6 +1,7 @@
 import React, {useState, useEffect}from 'react'
 import { useParams, Link} from 'react-router-dom'
 import ItemDetail from './ItemDetail'
+import {getFirestore, doc, getDoc} from 'firebase/firestore'
 export default function ItemDetailContainer({productos}) {
 
 const {id}=useParams()
@@ -9,38 +10,20 @@ const {id}=useParams()
 
 
 const [manga,setmanga]= useState([]);
+
+
+
+
   useEffect(()=>{
-    let productosObj = 
-    [{
-      id:1,
-      nombre:"Chain saw",
-      imagen:"https://images-na.ssl-images-amazon.com/images/I/81s8xJUzWGL.jpg",
-      tipo:"Manga",
-      precio:1750},
-      {
-      id:2,
-      nombre:"One punch",
-      imagen:"https://i.pinimg.com/736x/3c/0a/05/3c0a05fa6e0295b95f741352c342143a--le-lien-one-punch-man-manga.jpg",
-      tipo:"Manga",
-      precio:2750},
-      {
-      id:3,
-      nombre:"Monster",
-      imagen:"https://images.cdn2.buscalibre.com/fit-in/360x360/50/8a/508ae8657ccd59f01f0e438050ea4ce8.jpg",
-      tipo:"Manga",
-      precio:750},
-    ];
     
-    const promesaProductos = new Promise((res,rej)=>{
-      setTimeout(() => {
-      res(productosObj.find((e)=> e.id == id))
-      }, 2000)
-    });
-  
-  
-    promesaProductos.then((res) => {
-      setmanga(res);
-    })
+ //1 traer el servicio de firestore
+    const queryDb = getFirestore();
+  //2 crear un puntero al dato que queresmos traer
+    const  queryDoc = doc(queryDb, 'productos', id);
+  //3 trar el dato con una promesa
+    getDoc(queryDoc)
+    .then(res => setmanga({id: res.id, ...res.data()}))
+
   },[id]);
 
   return (
