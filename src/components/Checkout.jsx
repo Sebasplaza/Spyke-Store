@@ -4,7 +4,7 @@ import { useCartContext } from "../Cartcontex";
 import { addDoc, getFirestore, collection } from "firebase/firestore";
 const CartContex = React.createContext([]);
 export default function Checkout() {
-  const { totalPrice, cart } = useCartContext();
+  const { totalPrice, cart, removeAllProduct } = useCartContext();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [tel, setTel] = useState("");
@@ -22,6 +22,7 @@ export default function Checkout() {
 
     addDoc(ordenes, order).then(({ id }) => {
       setOrderId(id);
+      removeAllProduct();
     });
   }
 
@@ -67,7 +68,7 @@ export default function Checkout() {
           <button onClick={validateFrom} className="btn btn-primary">
             Terminar compra
           </button>
-          <h1>total: {totalPrice()}</h1>
+          <h1 className="text-success">Total: ${totalPrice()}</h1>
         </div>
       )}
     </>

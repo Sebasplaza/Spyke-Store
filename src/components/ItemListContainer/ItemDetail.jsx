@@ -27,11 +27,18 @@ export default function ItemDetail({ manga }) {
             <h2 className="text-start text-success">${manga.price}</h2>
             <p className="text-start">{manga.descripcion}</p>
             {goToCart ? (
-              <Link to="/cart">
-                <button type="submit" className="btn btn-primary">
-                  Terminar Compra
-                </button>
-              </Link>
+              <>
+                <Link to="/cart">
+                  <button type="submit" className="btn btn-primary">
+                    Terminar Compra
+                  </button>
+                </Link>
+                <Link to="/">
+                  <button type="submit" className="btn btn-primary">
+                    Seguir comprando
+                  </button>
+                </Link>
+              </>
             ) : (
               <ItemCount initial={3} stock={5} onAdd={onAdd} />
             )}

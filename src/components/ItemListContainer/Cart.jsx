@@ -8,7 +8,7 @@ export default function Cart() {
     return (
       <>
         <div className="container d-flex m-1 text-center">
-          <h1>no veo ningun manga en el carrito</h1>
+          <h1>No veo ningun manga en el carrito</h1>
         </div>
 
         <Link to="/" className="btn btn-primary m-4 text-center">

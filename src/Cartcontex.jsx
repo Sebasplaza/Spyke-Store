@@ -13,6 +13,7 @@ export default function CartProvider({ children }) {
 
   const removeProduct = (id) =>
     setCart(cart.filter((product) => product.id !== id));
+  const removeAllProduct = () => setCart([]);
 
   const addProduct = (item, quantity) => {
     if (isInCart(item.id)) {
@@ -47,6 +48,7 @@ export default function CartProvider({ children }) {
         addProduct,
         totalProducts,
         totalPrice,
+        removeAllProduct,
         cart,
       }}
     >
